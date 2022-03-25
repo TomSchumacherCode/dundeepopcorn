@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 const Container = styled.div`
   height: 60px; 
-  background-color: green;
+  background-color: rgb(46,110,4);
+  color: yellow;
 `;
 const Wrapper = styled.div`
   padding: 10px 20 px;
@@ -25,6 +26,10 @@ const Right = styled.div`
   margin-top: 10px;
 `;
 
+const Logo = styled.h3`
+  font-weight: bold;
+`
+
 
 
 const NavBar = () => {
@@ -32,8 +37,8 @@ const NavBar = () => {
     <Container>
       <Wrapper>
         <Left> Home </Left>
-        <Center> Products </Center>
-        <Right> About </Right>
+        <Center> <Logo>Dundee Popcorn</Logo> </Center>
+        <Right> Products </Right>
       </Wrapper>
     </Container>
   )
