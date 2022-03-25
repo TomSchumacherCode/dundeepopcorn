@@ -1,16 +1,14 @@
 import React from "react"
-import Announcement from "../components/Announcement";
 import NavBar from "../components/NavBar";
 
 
 
-const Home = () => {
+const Shop = () => {
   return (
     <div>
-      <Announcement/>
       <NavBar/>
     </div>
   )
 }
 
-export default Home;
+export default Shop;
