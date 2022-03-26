@@ -1,12 +1,14 @@
 import React from "react";
 import { Badge } from '@material-ui/core';
 import styled from "styled-components";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import dplogo from "../assets/images/logo-horizontal-black.jpeg";
+
 
 
 const Container = styled.div`
-  height: 60px; 
-  background-color: rgb(176, 176, 176);
+  min-height: 60px; 
+  // background-color: rgb(176, 176, 176);
   color: rgb(7, 33, 14);
 `;
 const Wrapper = styled.div`
@@ -30,20 +32,23 @@ const Right = styled.div`
   flex: 1;
   margin-top: 10px;
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
+  padding-right: 20px;
 `;
 
-const Logo = styled.h3`
-  font-weight: bold;
-`
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   align-items: center;
   justify-content: flex-end;
   margin-left: 25px;
 `
-
+const BadgeWrapper = styled.div`
+  align-items: center;
+`
+const DPLogo = styled.img`
+  width: 30vw;
+`
 
 const NavBar = () => {
   return (
@@ -54,11 +59,13 @@ const NavBar = () => {
           <MenuItem>Shop</MenuItem>
           <MenuItem>Our Story</MenuItem>
         </Left>
-        <Center> <Logo>Dundee Popcorn</Logo> </Center>
+        <Center> <DPLogo src={dplogo}></DPLogo> </Center>
         <Right> 
+          <BadgeWrapper>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartIcon color="action" />
             </Badge>
+          </BadgeWrapper>
         </Right>
       </Wrapper>
     </Container>
