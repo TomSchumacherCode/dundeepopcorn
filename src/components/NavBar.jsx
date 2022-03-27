@@ -3,6 +3,8 @@ import { Badge } from '@material-ui/core';
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import dplogo from "../assets/images/logo-horizontal-black.jpeg";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -50,14 +52,15 @@ const DPLogo = styled.img`
   width: 30vw;
 `
 
+
 const NavBar = () => {
   return (
     <Container>
       <Wrapper>
         <Left> 
-          <MenuItem>Home</MenuItem>
-          <MenuItem>Shop</MenuItem>
-          <MenuItem>Our Story</MenuItem>
+          <MenuItem> <Link to="home"> Home </Link> </MenuItem>
+          <MenuItem><Link to="shop"> Shop </Link></MenuItem>
+          <MenuItem><Link to="ourstory"> Our Story </Link></MenuItem>
         </Left>
         <Center> <DPLogo src={dplogo}></DPLogo> </Center>
         <Right> 
