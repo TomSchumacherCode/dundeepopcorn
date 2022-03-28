@@ -1,11 +1,12 @@
+import { Slider } from "@material-ui/core";
 import React from "react"
-import NavBar from "../components/NavBar";
 
 
 
 const Shop = () => {
   return (
     <div>
+        <Slider />
     </div>
   )
 }
